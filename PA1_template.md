@@ -4,7 +4,7 @@ Author: Rod Slagle
 ## Loading and preprocessing the data
 
 ```r
-knitr::opts_chunk$set(fig.path='figures/', echo=TRUE)
+knitr::opts_chunk$set(fig.path='figure/', echo=TRUE)
 
 unzip(zipfile="activity.zip")
 activity <- read.csv("activity.csv")
@@ -20,7 +20,7 @@ totalStepsPerDay <- tapply(activity$steps, activity$date, FUN=sum, na.rm=TRUE)
 hist(totalStepsPerDay, breaks=seq(0, 25000, by=1000), main="Histogram of Total Steps per Day", xlab="Total Steps per Day", ylab="Number of Days")
 ```
 
-![](figures/2_Total_Steps_per_Day-1.png)<!-- -->
+![](figure/2_Total_Steps_per_Day-1.png)<!-- -->
 
 ```r
 # Mean of Total Steps per Day
@@ -63,7 +63,7 @@ ggplot(averageIntervalStepCount, aes(x=interval, y=steps)) +
     ylab("Average Step Count")
 ```
 
-![](figures/3_Average_Daily_Activity_Pattern-1.png)<!-- -->
+![](figure/3_Average_Daily_Activity_Pattern-1.png)<!-- -->
 
 What Interval has the Maximum Average Step Count?
 
@@ -117,7 +117,7 @@ totalStepsPerDayUpdated <- tapply(activityUpdated$steps, activityUpdated$date, F
 hist(totalStepsPerDayUpdated, breaks=seq(0, 25000, by=1000), main="Histogram of Total Steps per Day With NA Updated", xlab="Total Steps per Day", ylab="Number of Days")
 ```
 
-![](figures/4_Plot_Historgram-1.png)<!-- -->
+![](figure/4_Plot_Historgram-1.png)<!-- -->
 
 
 ```r
@@ -181,6 +181,6 @@ ggplot(averageIntervalStepsWeekdayGroup, aes(interval, steps)) +
     ylab("Average Step Count")
 ```
 
-![](figures/5_weekday_weekend_plot-1.png)<!-- -->
+![](figure/5_weekday_weekend_plot-1.png)<!-- -->
 
 #### End of Report - "Reproducible Research: Peer Assessment 1"

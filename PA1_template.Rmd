@@ -8,7 +8,7 @@ output:
 
 ## Loading and preprocessing the data
 ```{r 1_load_data}
-knitr::opts_chunk$set(fig.path='figures/', echo=TRUE)
+knitr::opts_chunk$set(fig.path='figure/', echo=TRUE)
 
 unzip(zipfile="activity.zip")
 activity <- read.csv("activity.csv")
